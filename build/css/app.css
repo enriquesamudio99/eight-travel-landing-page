@@ -654,6 +654,45 @@ p {
   font-weight: 300;
 }
 
+.sites__heading {
+  margin-bottom: 3.5rem;
+}
+.sites__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 260px);
+  gap: 1.5rem;
+  overflow-x: scroll;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+@media (min-width: 576px) {
+  .sites__grid {
+    grid-template-columns: repeat(2, 1fr);
+    overflow-x: unset;
+  }
+}
+@media (min-width: 768px) {
+  .sites__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .sites__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.sites .site {
+  scroll-snap-align: center;
+}
+.sites .site__img {
+  border-radius: 0.5rem;
+}
+.sites .site__name {
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
 .text-center {
   text-align: center;
 }

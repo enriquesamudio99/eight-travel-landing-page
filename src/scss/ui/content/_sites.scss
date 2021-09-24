@@ -1,0 +1,47 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.sites {
+
+    &__heading {
+        margin-bottom: v.$gutter;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4,260px);
+        gap: 1.5rem;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+
+        @include m.sm { 
+            grid-template-columns: repeat(2,1fr);
+            overflow-x: unset;
+        }
+
+        @include m.md { 
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        @include m.lg { 
+            grid-template-columns: repeat(4,1fr);
+        }
+
+    }
+
+    .site {
+        scroll-snap-align: center;
+ 
+        &__img {
+            border-radius: .5rem;
+        }
+
+        &__name {
+            margin-top: .5rem;
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
+
+    }
+
+}
