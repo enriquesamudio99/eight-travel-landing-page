@@ -12,7 +12,7 @@
         margin-top: 7rem;
         text-align: center;
 
-        @include m.md { 
+        @include m.lg { 
             margin-top: 12rem;
         }
     } 
@@ -28,6 +28,6 @@
     }
 
     &__search-btn {
-        @include m.btn(v.$white, v.$primary); 
+        @include m.btn(v.$white, v.$secondary); 
     }
 }
