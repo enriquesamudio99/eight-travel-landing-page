@@ -1,0 +1,33 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.header {
+    padding: 2rem 0 12rem;
+    background-image: linear-gradient(to right, rgba(0,0,0,.8) 0%, rgba(0,0,0,.8) 100%), url(../img/header.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    &__search {
+        margin-top: 7rem;
+        text-align: center;
+
+        @include m.md { 
+            margin-top: 12rem;
+        }
+    } 
+
+    &__search-label {
+        font-size: 1.125rem;
+        color: v.$white;
+        margin-bottom: 0;
+
+        @include m.md { 
+            font-size: 1.25rem;
+        }
+    }
+
+    &__search-btn {
+        @include m.btn(v.$white, v.$primary); 
+    }
+}

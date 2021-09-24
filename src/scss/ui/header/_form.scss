@@ -1,0 +1,71 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.form {
+    margin: v.$gutter auto 0;
+    padding: 1rem; 
+    background-color: v.$white;
+    border-radius: 3rem;
+    box-shadow: 0px 4px 6px rgba($color: #636363, $alpha: .2);
+    max-width: 450px;
+    overflow: hidden;
+
+    @include m.md { 
+        padding: 1.5rem;
+    }
+
+    @include m.lg { 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 950px;
+        padding: 0; 
+    }
+
+    &__field {
+        padding: .75rem 1rem;
+        display: flex;
+        flex-direction: column;
+
+        @include m.lg { 
+            &:nth-child(1) {
+                padding: .75rem 1rem .75rem 2rem;
+            }
+
+            &:hover:not(:last-of-type) {
+                background-color: #f0f0f0;
+            }
+        }
+    }
+
+    &__label {
+        font-size: .75rem;
+        font-weight: bold;
+        margin-bottom: .25rem;
+
+        @include m.md { 
+            font-size: .875rem;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        padding: .25rem;
+        background: transparent;
+    } 
+
+    &__submit {
+        display: block;
+        padding: .75rem 1.5rem;
+        border-radius: 2.75rem;
+        border: none;
+        outline: none; 
+        cursor: pointer;
+        background-image: radial-gradient(circle, lighten(v.$secondary, 5%) 0%, v.$secondary 100%);
+        color: v.$white;
+        font-weight: 900;
+    }
+}

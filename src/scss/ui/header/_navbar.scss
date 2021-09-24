@@ -1,0 +1,53 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.navbar {
+    display: none;
+
+    @include m.md { 
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__name {
+        color: v.$white;
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+
+    &__link {
+        color: v.$white;
+        margin-right: 1rem;
+        font-size: 1.125rem;
+        font-weight: 300; 
+        transition: opacity .2s ease-in-out;
+
+        @include m.lg { 
+            margin-right: 2.5rem;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &:hover {
+            opacity: .75;
+        }
+    }
+
+    
+    &__host-link {
+        display: inline-block;
+        color: v.$white;
+        font-size: 1.125rem;
+        font-weight: 300;
+        padding: .75rem 1rem;
+        border-radius: 2rem;
+        transition: background-color .2s ease-in-out;
+
+        &:hover {
+            background-color: rgba($color: #ffffff, $alpha: 0.2);
+        }
+    }
+}
