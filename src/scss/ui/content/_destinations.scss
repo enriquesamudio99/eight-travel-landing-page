@@ -1,0 +1,47 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.destinations {
+
+    &__heading {
+        margin-bottom: v.$gutter;
+    }
+
+    &__grid {
+        @include m.grid(1,2rem);
+
+        @include m.sm { 
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        @include m.lg { 
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        @include m.xl { 
+            grid-template-columns: repeat(4,1fr);
+        }
+    }
+
+}
+
+.destination {
+    display: flex;
+    align-items: center;
+
+    &__img {
+        width: 140px;
+        margin-right: 1rem;
+    }
+
+    &__name {
+        font-size: 1.25rem;
+        margin-bottom: .5rem;
+    }
+
+    &__distance {
+        margin: 0;
+        font-weight: 300;
+    }
+
+}

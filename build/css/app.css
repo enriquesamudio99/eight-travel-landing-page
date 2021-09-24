@@ -350,7 +350,7 @@ html {
 
 body {
   font-family: "Lexend", sans-serif;
-  color: #000000;
+  color: #222222;
   font-size: 1rem;
   line-height: 1.618;
 }
@@ -403,11 +403,11 @@ a {
   }
 }
 .section {
-  padding: 1.5rem 0;
+  padding: 2rem 0;
 }
 @media (min-width: 992px) {
   .section {
-    padding: 2rem 0;
+    padding: 3rem 0;
   }
 }
 
@@ -611,6 +611,47 @@ p {
   background-image: radial-gradient(circle, #d32163 0%, #bd1e59 100%);
   color: #ffffff;
   font-weight: 900;
+}
+
+.destinations__heading {
+  margin-bottom: 3.5rem;
+}
+.destinations__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+@media (min-width: 576px) {
+  .destinations__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .destinations__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .destinations__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.destination {
+  display: flex;
+  align-items: center;
+}
+.destination__img {
+  width: 140px;
+  margin-right: 1rem;
+}
+.destination__name {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.destination__distance {
+  margin: 0;
+  font-weight: 300;
 }
 
 .text-center {

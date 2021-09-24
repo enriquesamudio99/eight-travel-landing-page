@@ -13,7 +13,7 @@ html {
   
 body {
     font-family: v.$mainFont;
-    color: v.$black;
+    color: v.$dark;
     font-size: 1rem;
     line-height: 1.618;
 }
@@ -67,9 +67,9 @@ a {
 }
 
 .section {
-    padding: 1.5rem 0;
+    padding: 2rem 0;
 
     @include m.lg { 
-        padding: 2rem 0;
+        padding: 3rem 0;
     }
 }
