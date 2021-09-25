@@ -4,7 +4,7 @@
 .destinations {
 
     &__heading {
-        margin-bottom: v.$gutter;
+        margin-bottom: 2rem;
     }
 
     &__grid {
@@ -28,6 +28,7 @@
 .destination {
     display: flex;
     align-items: center;
+    cursor: pointer;
 
     &__img {
         width: 140px;

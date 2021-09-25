@@ -1,13 +1,13 @@
 @use "base/variables" as v;
 @use "base/mixins" as m;
 
-.sites {
+.experiences {
 
     &__heading {
         margin-bottom: 2rem;
     }
 
-    &__grid {
+    &__list {
         display: grid;
         grid-template-columns: repeat(4,260px);
         gap: 1.5rem;
@@ -19,30 +19,31 @@
             overflow-x: unset;
         }
 
-        @include m.md { 
-            grid-template-columns: repeat(3,1fr);
-        }
-
         @include m.lg { 
-            grid-template-columns: repeat(4,1fr);
+            grid-template-columns: repeat(3,1fr);
         }
 
     }
 
-    .site {
+    .experience {
         scroll-snap-align: center;
         cursor: pointer;
- 
+
         &__img {
             border-radius: .5rem;
         }
 
-        &__name {
-            margin-top: .5rem;
+        &__title {
+            margin: .5rem 0 0;
             font-size: 1.125rem;
             font-weight: 500;
         }
 
+        &__description {
+            margin: 0;
+            font-weight: 300;
+        }
+        
     }
 
 }

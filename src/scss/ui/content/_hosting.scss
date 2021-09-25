@@ -9,7 +9,7 @@
     background-image: linear-gradient(to bottom, v.$black 0%, v.$black 53%, transparent 53%), url(../img/anfitrion.jpg);
     background-size: 100%, cover;
     background-repeat: no-repeat;
-    background-position: center, center bottom -250px;
+    background-position: center, center bottom -250px; 
     border-radius: 1rem;
 
     @include m.md { 
