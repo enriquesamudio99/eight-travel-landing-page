@@ -1,0 +1,80 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.footer {
+    background-color: lighten(v.$lightGray, 7%);
+    border-top: 1px solid lighten(v.$gray, 40%); 
+    padding-top: v.$gutter;
+
+    &__grid {
+        @include m.grid(1,2rem);
+
+        @include m.sm { 
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        @include m.md { 
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        @include m.lg { 
+            grid-template-columns: repeat(4,1fr);
+        }
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        font-size: 1.125rem;
+    }
+
+    &__link {
+        display: block;
+        margin-bottom: .5rem;
+        font-size: .938rem;
+        font-weight: 300;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &--bar {
+            display: flex;
+            align-items: center;
+           
+            @include m.sm { 
+                margin-bottom: 0;
+                margin-right: .5rem;
+    
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+
+            @include m.sm { 
+                &::before {
+                    content: "-";
+                    display: block;
+                    margin-right: .5rem;
+                }
+
+            }
+
+        }
+    }
+
+    &__bar {
+        margin-top: v.$gutter;
+        border-top: 1px solid lighten(v.$gray, 40%); 
+        padding: 2rem 0;
+    }
+
+    &__navbar {
+        display: flex;
+        flex-direction: column;
+
+        @include m.sm { 
+            flex-direction: row;
+        }
+    }
+}
