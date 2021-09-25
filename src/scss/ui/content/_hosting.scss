@@ -1,0 +1,55 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.hosting {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    gap: 3rem;
+    padding: v.$gutter 2rem;
+    background-image: linear-gradient(to bottom, v.$black 0%, v.$black 53%, transparent 53%), url(../img/anfitrion.jpg);
+    background-size: 100%, cover;
+    background-repeat: no-repeat;
+    background-position: center, center bottom -250px;
+    border-radius: 1rem;
+
+    @include m.md { 
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: unset;
+        gap: 8rem;
+        background-image: linear-gradient(to right, v.$black 0%, v.$black 45%, transparent 55%), url(../img/anfitrion.jpg);
+        background-size: 100%, auto;
+        background-position: center, 50% 30%;
+        padding: calc(v.$gutter * 3) 1.75rem;
+    }
+
+    @include m.xl { 
+        gap: 12rem;
+        background-position: center, 100% 30%;
+    }
+
+    &__content {
+        color: v.$white;
+        @include m.md { 
+            grid-column: 1 / 2;
+        }
+        @include m.lg { 
+            padding-left: 3.5rem;
+        }
+    }
+
+    &__text {
+        @include m.xl { 
+            width: 70%;
+        }
+    }
+
+    &__btn {
+        @include m.btn(v.$white, v.$black);
+        border-radius: .5rem;
+        padding: .75rem 1.25rem;
+        font-size: 1rem;
+        font-weight: 400;
+        display: inline-block;
+    }
+
+}
